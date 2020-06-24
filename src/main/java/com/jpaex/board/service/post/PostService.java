@@ -24,7 +24,6 @@ public class PostService {
 
     @Transactional
     public Long save(PostSaveRequestDto requestDto){
-        logger.info("Service : "+requestDto.getPhoto1());
         return postRepository.save(requestDto.toEntity()).getId();
     }
 
